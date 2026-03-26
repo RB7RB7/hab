@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { NAV_LINKS } from "@/lib/constants";
+import { NAV_LINKS, BANNER } from "@/lib/constants";
 import { Menu, XMark } from "@/components/ui/Icons";
 
 export default function Navbar() {
@@ -18,7 +18,7 @@ export default function Navbar() {
           alignItems: "center",
           width: "100%",
           minHeight: "4.5rem",
-          padding: "1rem 2.5rem",
+          padding: "1rem var(--padding-global)",
         }}
       >
         {/* navbar_container */}
@@ -36,20 +36,20 @@ export default function Navbar() {
         >
           {/* Logo */}
           <a
-            href="#"
+            href="/"
             style={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              maxWidth: "6rem",
               marginRight: "3rem",
               paddingLeft: 0,
               color: "var(--link-primary)",
               textDecoration: "none",
+              whiteSpace: "nowrap",
             }}
           >
             <span className="font-heading" style={{ fontSize: "1.25rem", fontWeight: 600, letterSpacing: "-0.02em" }}>
-              H.A.B.
+              H.A.B Sales Invest
             </span>
           </a>
 
@@ -127,7 +127,7 @@ export default function Navbar() {
         className={`mobile-nav-menu ${menuOpen ? "is-open" : ""}`}
         style={{ backgroundColor: "var(--bg-secondary)" }}
       >
-        <div style={{ padding: "1.25rem 2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+        <div style={{ padding: "1.25rem var(--padding-global)", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
@@ -156,6 +156,25 @@ export default function Navbar() {
           >
             Kom igång
           </a>
+        </div>
+      </div>
+
+      {/* Banner - below navbar, sticky together */}
+      <div
+        className="border-b flex flex-col items-center justify-center py-4"
+        style={{
+          borderColor: "var(--border-primary)",
+          backgroundColor: "var(--bg-secondary)",
+        }}
+      >
+        <div className="padding-global">
+          <div className="flex items-center justify-center gap-2">
+            <div
+              className="w-2 h-2 shrink-0"
+              style={{ backgroundColor: "var(--swatch--dark)" }}
+            />
+            <p className="text-label">{BANNER.text}</p>
+          </div>
         </div>
       </div>
     </nav>

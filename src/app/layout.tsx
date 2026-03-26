@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "H.A.B. Sales Invest AB | B2B Säljkonsulter",
+  title: "H.A.B. Sales Invest AB – Försäljningskonsulter som levererar resultat",
   description:
-    "Över 20 års erfarenhet av att bygga lönsam B2B-försäljning. Säljstrategi, outsourcad säljstyrka och säljträning.",
+    "Öka er försäljning med H.A.B. Sales Invest AB. Över 20 års erfarenhet inom B2B-försäljning, prospektering, lead-hantering och säljträning. Kontakta oss för ett kostnadsfritt samtal.",
 };
 
 export default function RootLayout({

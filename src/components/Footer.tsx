@@ -1,4 +1,5 @@
 import { FOOTER } from "@/lib/constants";
+import { ArrowRight } from "@/components/ui/Icons";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         color: "var(--text-alternate)",
       }}
     >
-      <div className="padding-global padding-section-large">
+      <div className="padding-global" style={{ paddingTop: "5rem", paddingBottom: "2rem" }}>
         <div className="container-large">
           {/* footer_component */}
           <div className="flex flex-col">
@@ -16,22 +17,19 @@ export default function Footer() {
             <div className="flex flex-col" style={{ gap: "4.5rem" }}>
               {/* Logo */}
               <a
-                href="#"
+                href="/"
                 className="no-underline"
-                style={{ width: "6rem", color: "var(--link-alternate)" }}
+                style={{ color: "var(--link-alternate)" }}
               >
-                <span className="font-heading text-xl font-semibold">
-                  H.A.B.
+                <span className="font-heading text-xl font-semibold" style={{ whiteSpace: "nowrap" }}>
+                  H.A.B Sales Invest
                 </span>
               </a>
 
               {/* Top wrapper grid - 1fr 1fr → 1fr on mobile */}
-              <div className="grid gap-8 footer-top-grid">
-                {/* Left content - max-width 27.5rem */}
-                <div
-                  className="flex flex-col gap-6 items-start"
-                  style={{ maxWidth: "27.5rem" }}
-                >
+              <div className="grid gap-8 footer-top-grid items-start">
+                {/* Left content - heading */}
+                <div className="flex flex-col gap-6 items-start">
                   <h2
                     className="font-heading whitespace-pre-line"
                     style={{
@@ -42,6 +40,12 @@ export default function Footer() {
                   >
                     {FOOTER.heading}
                   </h2>
+                </div>
+                {/* Right content - description & CTA */}
+                <div
+                  className="flex flex-col gap-6 items-start"
+                  style={{ maxWidth: "30rem" }}
+                >
                   <p
                     className="text-[0.875rem]"
                     style={{ color: "var(--white-500)", lineHeight: 1.5 }}
@@ -50,14 +54,15 @@ export default function Footer() {
                   </p>
                   <a
                     href="#kontakt"
-                    className="inline-flex items-center justify-center text-[0.875rem] font-medium no-underline px-6 py-3 border"
+                    className="inline-flex items-center gap-3 text-[0.875rem] font-medium no-underline px-6 py-3"
                     style={{
-                      borderColor: "var(--border-alternate)",
-                      color: "var(--link-alternate)",
+                      backgroundColor: "var(--swatch--white)",
+                      color: "var(--swatch--dark)",
                     }}
                     data-bezel=""
                   >
                     {FOOTER.cta}
+                    <ArrowRight size={16} />
                   </a>
                 </div>
               </div>
@@ -106,13 +111,20 @@ export default function Footer() {
             </div>
 
             {/* Credit */}
-            <div className="flex items-center justify-between gap-4 pt-6">
+            <div className="flex items-center justify-between flex-wrap gap-4 pt-6">
               <p
                 className="text-[0.875rem]"
                 style={{ color: "var(--white-500)" }}
               >
                 {FOOTER.copyright}
               </p>
+              <div
+                className="flex flex-wrap gap-x-6 gap-y-1 text-[0.8125rem]"
+                style={{ color: "var(--white-500)" }}
+              >
+                <span>Org.nr 559459-3534</span>
+                <span>Krusegatan 19, 212 25 Malmö</span>
+              </div>
             </div>
           </div>
         </div>

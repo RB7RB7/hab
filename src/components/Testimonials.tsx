@@ -40,18 +40,19 @@ export default function Testimonials() {
               </h2>
             </div>
 
-            {/* Nav buttons */}
-            <div className="hidden sm:flex items-center gap-4">
+            {/* Nav buttons — aligned to bottom-right of header */}
+            <div className="hidden sm:flex items-end gap-2" style={{ alignSelf: "flex-end" }}>
               <button
                 onClick={() => swiperRef.current?.slidePrev()}
-                className="flex items-center justify-center border"
+                className="flex items-center justify-center"
                 style={{
-                  width: "3rem",
-                  height: "3rem",
-                  padding: "0.75rem",
-                  borderColor: "var(--border-secondary)",
-                  backgroundColor: "var(--dark-50)",
-                  color: "var(--text-primary)",
+                  width: "3.5rem",
+                  height: "3.5rem",
+                  backgroundColor: "#e8e6e3",
+                  border: "none",
+                  borderRadius: "0.375rem",
+                  color: "#222",
+                  cursor: "pointer",
                 }}
                 aria-label="Föregående"
               >
@@ -59,14 +60,15 @@ export default function Testimonials() {
               </button>
               <button
                 onClick={() => swiperRef.current?.slideNext()}
-                className="flex items-center justify-center border"
+                className="flex items-center justify-center"
                 style={{
-                  width: "3rem",
-                  height: "3rem",
-                  padding: "0.75rem",
-                  borderColor: "var(--border-secondary)",
-                  backgroundColor: "var(--dark-50)",
-                  color: "var(--text-primary)",
+                  width: "3.5rem",
+                  height: "3.5rem",
+                  backgroundColor: "#e8e6e3",
+                  border: "none",
+                  borderRadius: "0.375rem",
+                  color: "#222",
+                  cursor: "pointer",
                 }}
                 aria-label="Nästa"
               >

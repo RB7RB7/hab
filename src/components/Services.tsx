@@ -1,7 +1,15 @@
 import { FEATURES } from "@/lib/constants";
-import { ASSETS } from "@/lib/assets";
+import {
+  ProspektingIllustration,
+  LeadClosingIllustration,
+  StrategiIllustration,
+} from "@/components/ui/FeatureIllustrations";
 
-const featureImages = [ASSETS.feature1, ASSETS.feature2, ASSETS.feature2];
+const featureIllustrations = [
+  <ProspektingIllustration key="prospekting" />,
+  <LeadClosingIllustration key="leads" />,
+  <StrategiIllustration key="strategi" />,
+];
 
 export default function Services() {
   return (
@@ -39,7 +47,7 @@ export default function Services() {
                 </div>
               </div>
 
-              {/* Image side */}
+              {/* Illustration side */}
               <div
                 className={`flex items-center justify-center overflow-hidden ${
                   item.reverse ? "order-1 lg:order-1" : "order-1 lg:order-2"
@@ -50,14 +58,7 @@ export default function Services() {
                   padding: "2rem",
                 }}
               >
-                <img
-                  src={featureImages[i]}
-                  alt=""
-                  className="w-full h-auto max-w-md object-contain"
-                  style={{
-                    filter: i === 0 ? "none" : "none",
-                  }}
-                />
+                {featureIllustrations[i]}
               </div>
             </div>
           </div>

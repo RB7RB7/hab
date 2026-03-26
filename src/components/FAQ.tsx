@@ -96,10 +96,19 @@ export default function FAQ() {
           </div>
 
           {/* CTA */}
-          <div className="self-start">
-            <div className="flex items-center gap-4">
-              <FacePile count={3} label="Fler frågor? Kontakta oss." />
-            </div>
+          <div className="self-start flex flex-col gap-4 items-start">
+            <FacePile count={3} label="Fler frågor? Kontakta oss." />
+            <a
+              href="#kontakt"
+              className="inline-flex items-center justify-center gap-2 text-[0.875rem] font-medium no-underline px-6 py-3"
+              style={{
+                backgroundColor: "var(--swatch--dark)",
+                color: "var(--swatch--white)",
+              }}
+              data-bezel=""
+            >
+              Kontakta oss
+            </a>
           </div>
         </div>
       </div>
