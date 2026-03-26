@@ -41,10 +41,10 @@ export default function CaseStudy() {
         />
       </div>
 
-      {/* Gradient overlay */}
+      {/* Gradient overlay – bottom extended 1px to prevent subpixel seam on mobile */}
       <div
-        className="absolute inset-0 z-[1] pointer-events-none"
-        style={{ backgroundImage: "linear-gradient(#2220 20%, #222)" }}
+        className="absolute z-[1] pointer-events-none"
+        style={{ inset: "0 0 -1px 0", backgroundImage: "linear-gradient(#2220 20%, #222)" }}
       />
 
       {/* Content */}
