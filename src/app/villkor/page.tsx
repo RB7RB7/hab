@@ -12,7 +12,7 @@ export default function Villkor() {
       <Navbar />
       <main
         className="padding-global"
-        style={{ paddingTop: "8rem", paddingBottom: "4rem" }}
+        style={{ paddingTop: "4rem", paddingBottom: "4rem" }}
       >
         <div className="container-medium">
           <h1 className="font-heading" style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>

@@ -21,7 +21,7 @@ export default function CaseStudy() {
   return (
     <section
       className="relative flex flex-col justify-end"
-      style={{ height: "50svh" }}
+      style={{ minHeight: "50svh" }}
     >
       {/* Video / background */}
       <div className="absolute inset-0 z-0">

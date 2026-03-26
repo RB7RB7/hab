@@ -136,7 +136,7 @@ export const COMPARISON = {
     { feature: "Lead-hantering & closing", hab: true, competitor: "Delvis" },
     { feature: "Säljträning & coaching", hab: true, competitor: false },
     { feature: "Strategirådgivning", hab: true, competitor: true },
-    { feature: "Anpassade upplägg", hab: "Alltid skräddarsytt", competitor: "Standardpaket" },
+    { feature: "Anpassat upplägg", hab: "Alltid efter er", competitor: "Fast paket" },
     { feature: "Långsiktigt fokus", hab: "Bygger bestående resultat", competitor: "Korta uppdrag" },
   ],
 } as const;
